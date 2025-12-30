@@ -81,7 +81,7 @@ MIT © 2025 Benjamin Millalonco
 
 - GitHub: hxcCoder
 
-- LinkedIn:
+- LinkedIn: www.linkedin.com/in/benjamin-millalonco[www.linkedin.com/in/benjamin-millalonco]
 
 - Email: 
 ## Contribuciones
