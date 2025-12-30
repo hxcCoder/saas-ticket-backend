@@ -17,6 +17,7 @@ cd saas-ticket-backend
 npm install
 npm run dev
 Endpoints principales
+-
 
 POST /auth/register → Registrar usuario
 
@@ -38,7 +39,6 @@ GET /tickets → Listar tickets según rol
 
 POST /tickets → Crear ticket
 bash´´´
-
 Licencia
 
 MIT © 2025 Benjamin Millalonco
