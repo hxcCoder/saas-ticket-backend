@@ -25,3 +25,18 @@ POST /auth/login → Login
 GET /tickets → Listar tickets según rol
 
 POST /tickets → Crear ticket
+
+Endpoints principales
+-
+
+POST /auth/register → Registrar usuario
+
+POST /auth/login → Login
+
+GET /tickets → Listar tickets según rol
+
+POST /tickets → Crear ticket
+
+Licencia
+
+MIT © 2025 Benjamin Millalonco
