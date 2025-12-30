@@ -1,21 +1,24 @@
-import { Request, Response, NextFunction } from 'express';
-import { verifyToken } from '../utils/jwt';
+import { Request, Response, NextFunction } from "express";
+import { verifyToken } from "../services/jwt.services";
 
-export const authMiddleware = (
+export function authMiddleware(
   req: Request,
   res: Response,
   next: NextFunction
-) => {
-  const header = req.headers.authorization;
-  if (!header) return res.status(401).json({ message: 'No token' });
+) {
+  const authHeader = req.headers.authorization;
 
-  const token = header.split(' ')[1];
+  if (!authHeader) {
+    return res.status(401).json({ message: "Token missing" });
+  }
+
+  const token = authHeader.split(" ")[1];
 
   try {
-    const payload = verifyToken(token);
-    (req as any).user = payload;
+    const decoded = verifyToken(token);
+    (req as any).user = decoded;
     next();
   } catch {
-    res.status(401).json({ message: 'Invalid token' });
+    return res.status(401).json({ message: "Invalid token" });
   }
-};
+}
