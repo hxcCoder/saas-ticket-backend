@@ -1,9 +1,9 @@
-// src/prisma.config.ts
 import "dotenv/config";
 import { defineConfig } from "prisma/config";
 
 export default defineConfig({
   datasource: {
-    url: process.env.DATABASE_URL, // solo la URL
+    url: process.env.DATABASE_URL,
+
   },
 });
