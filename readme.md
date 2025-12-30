@@ -12,12 +12,12 @@ Incluye autenticación con JWT, roles de usuario y CRUD completo de tickets.
 ## Instalación rápida
 
 ```bash
+
 git clone https://github.com/hxcCoder/saas-ticket-backend.git
 cd saas-ticket-backend
 npm install
 npm run dev
-Endpoints principales
--
+
 
 POST /auth/register → Registrar usuario
 
@@ -26,19 +26,8 @@ POST /auth/login → Login
 GET /tickets → Listar tickets según rol
 
 POST /tickets → Crear ticket
+```bash
 
-
-Endpoints principales
--
-
-POST /auth/register → Registrar usuario
-
-POST /auth/login → Login
-
-GET /tickets → Listar tickets según rol
-
-POST /tickets → Crear ticket
-bash´´´
 Licencia
 
 MIT © 2025 Benjamin Millalonco
