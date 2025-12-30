@@ -1,20 +1,28 @@
 {
-  "name": "backend",
+  "name": "saas-ticket-backend",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Backend SaaS modular de gestión de tickets",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "node",
+    "typescript",
+    "backend",
+    "saas",
+    "tickets"
+  ],
+  "author": "Benjamin Millalonco",
+  "license": "MIT",
   "dependencies": {
     "@prisma/client": "^7.2.0",
     "bcrypt": "^6.0.0",
     "express": "^5.2.1",
     "jsonwebtoken": "^9.0.3",
-    "prisma": "^7.2.0",
     "swagger-jsdoc": "^6.2.8",
     "swagger-ui-express": "^5.0.1"
   },
@@ -28,6 +36,8 @@
     "jest": "^30.2.0",
     "ts-jest": "^29.4.6",
     "ts-node-dev": "^2.0.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "prisma": "^7.2.0"
   }
 }
+  
