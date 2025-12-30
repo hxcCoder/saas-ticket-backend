@@ -4,6 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
+  // No pongas `url` aquí, ahora va en prisma.config.ts
 }
 
 model User {
@@ -13,8 +14,7 @@ model User {
   name      String?
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
-  tickets   Ticket[] // relación con tickets
+  tickets   Ticket[]
 }
 
 enum Priority {
@@ -33,3 +33,4 @@ model Ticket {
   user        User?    @relation(fields: [userId], references: [id])
   userId      String?
 }
+  
